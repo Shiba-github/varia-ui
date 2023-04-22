@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
     entry: {
-        bandle: './src/entry.tsx',
+        bandle: './src/Entry.tsx',
     },
     output: {
         path: path.join(__dirname, './dist'),
@@ -19,6 +19,12 @@ module.exports = {
         },
         open: true,
         port: 3000,
+    },
+    resolve: {
+        alias: {
+            "@": path.resolve(__dirname, "src"),
+        },
+        extensions: ['.js', '.ts', '.tsx'],
     },
     module: {
         rules: [

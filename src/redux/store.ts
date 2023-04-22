@@ -1,14 +1,16 @@
 import { configureStore } from '@reduxjs/toolkit'
+import colorSlice from './color/colorSlice'
+import cssObjectSlice from './cssObject/cssObjectSlice'
+import fontSizeSlice from './fontSize/fontSizeSlice'
 // import cssCustomAnimeAreaSlice from './components/cssCustomAnimeArea/cssCustomAnimeAreaSlice'
 // import pseudoAreaSlice from './components/pseudoArea/pseudoAreaSlice'
 // import counterReducer from './redux_test/counterSlice'
-import testReducer from './testSlice/testSlice'
 
 export const store = configureStore({
     reducer: {
-        test: testReducer,
-        // cssCustomAnimeArea: cssCustomAnimeAreaSlice,
-        // pseudoArea: pseudoAreaSlice,
+        cssObjectReducer: cssObjectSlice,
+        fontSizeReducer: fontSizeSlice,
+        colorReducer: colorSlice
     },
 })
 

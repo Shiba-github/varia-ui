@@ -1,14 +1,12 @@
 import { ChakraProvider, Flex } from '@chakra-ui/react'
 import React, { useEffect } from 'react'
 import { Provider } from 'react-redux'
-
-import Header from './components/common/Header'
-
 import { Route, Routes } from 'react-router-dom'
-import { store } from './redux/store'
-import { mainTheme } from './style/mainTheme'
-// import Editor from './page/Editor/Editor'
-// import Template from './page/Template/Template'
+import { store } from '@/redux/store'
+import { mainTheme } from '@/style/mainTheme'
+import { Editor } from '@/components/pages/editor'
+import { Template } from '@/components/pages/template'
+import Header from '@/components/shared/Header'
 
 const App = () => {
     useEffect(() => {
@@ -21,10 +19,10 @@ const App = () => {
             <ChakraProvider theme={mainTheme}>
                 <Flex flexDirection="column">
                     <Header />
-                    {/* <Routes>
+                    <Routes>
                         <Route index element={<Template />} />
                         <Route path="editor" element={<Editor />} />
-                    </Routes> */}
+                    </Routes>
                 </Flex>
             </ChakraProvider>
         </Provider>
