@@ -4,5 +4,5 @@ export const body = {
         color: 'gray.800',
         bg: 'white',
         lineHeight: 'base',
-    }
+    },
 }

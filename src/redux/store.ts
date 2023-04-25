@@ -10,7 +10,7 @@ export const store = configureStore({
     reducer: {
         cssObjectReducer: cssObjectSlice,
         fontSizeReducer: fontSizeSlice,
-        colorReducer: colorSlice
+        colorReducer: colorSlice,
     },
 })
 

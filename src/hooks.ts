@@ -8,21 +8,21 @@ export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector
 type typeCSSObject = {
     cssObject: CSSObject
 }
-const mergeCSS = (cssObject:typeCSSObject) => {
+const mergeCSS = (cssObject: typeCSSObject) => {}
 
-}
-
-const getCSSObject = () => {
-
-}
+const getCSSObject = () => {}
 
 const initCSSObject = () => {
-    const tmpCSSObject:CSSObject = {}
+    const tmpCSSObject: CSSObject = {}
 }
 
 const getCSS = () => {
     return {
-    color: useAppSelector((state) => {state.colorReducer.color}),
-    fontSize: useAppSelector((state) => {state.fontSizeReducer.fontSize})
+        color: useAppSelector((state) => {
+            state.colorReducer.color
+        }),
+        fontSize: useAppSelector((state) => {
+            state.fontSizeReducer.fontSize
+        }),
     }
 }

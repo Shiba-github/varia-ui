@@ -8,23 +8,23 @@ type typecolor = {
 
 const initialState: typecolor = {
     color: {
-        '_default': {
-		    color: '12px',
-        }
-    }
+        _default: {
+            color: '12px',
+        },
+    },
 }
 
 export const colorSlice = createSlice({
     name: 'color',
     initialState,
     reducers: {
-        mergeCSS: (state, action:PayloadAction<CSSObject>) => {
+        mergeCSS: (state, action: PayloadAction<CSSObject>) => {
             state.color = {
                 ...state.color,
-                ...action.payload
-        }
+                ...action.payload,
+            }
+        },
     },
-    }
 })
 
 export const { mergeCSS } = colorSlice.actions

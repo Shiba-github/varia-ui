@@ -1,5 +1,15 @@
 import React, { useState } from 'react'
-import { Slider, SliderTrack, SliderFilledTrack, SliderThumb, SliderMark, Tooltip, Flex, Text, FlexboxProps } from '@chakra-ui/react'
+import {
+    Slider,
+    SliderTrack,
+    SliderFilledTrack,
+    SliderThumb,
+    SliderMark,
+    Tooltip,
+    Flex,
+    Text,
+    FlexboxProps,
+} from '@chakra-ui/react'
 import { css, CSSObject } from '@emotion/react'
 
 type typeProps = {
@@ -17,7 +27,7 @@ type typeProps = {
     sliderValue: number
     sliderMinValue?: number
     sliderMaxValue?: number
-    onChangeSliderHandler: (v:number) => void
+    onChangeSliderHandler: (v: number) => void
     sliderMarkNumList?: number[]
     tooltipHasArrow?: boolean
     tooltipPlacement?: 'top' | 'right' | 'bottom' | 'left'
@@ -32,7 +42,7 @@ const defaultWrapperStyles = {
     border: '1px',
     borderRadius: '1rem',
     borderColor: 'gray',
-    backgroundColor: 'gray'
+    backgroundColor: 'gray',
 }
 
 const defaultTitleTextStyles = {
@@ -40,20 +50,20 @@ const defaultTitleTextStyles = {
     color: 'black',
     fontSize: '1.2rem',
     marginLeft: '1rem',
-    marginRight: '1rem'
+    marginRight: '1rem',
 }
 const defaultSliderStyles = {}
 const defaultSliderMarkStyles = {
     marginTop: '1px',
     marginLeft: '-2.5px',
-    fontSize: '15px'
+    fontSize: '15px',
 }
 const defaultSliderTrackStyles = {}
 const defaultSliderThumbStyles = {}
 const defaultSliderFilledTrackStyles = {}
 const defaultTooltipStyles = {
     color: 'white',
-    backgroundColor: 'green'
+    backgroundColor: 'green',
 }
 
 export const SliderEditer = ({
@@ -74,83 +84,76 @@ export const SliderEditer = ({
     onChangeSliderHandler,
     sliderMarkNumList = [50, 100, 150],
     tooltipHasArrow = true,
-    tooltipPlacement = 'top'
-    }: typeProps) => {
+    tooltipPlacement = 'top',
+}: typeProps) => {
     const [showTooltip, setShowTooltip] = useState(true)
     const mergedWrapperStyles = {
         ...defaultWrapperStyles,
-        ...css(wrapperStyles)
+        ...css(wrapperStyles),
     }
     const mergedTitleTextStyles = {
         ...defaultTitleTextStyles,
-        ...css(titleTextStyles)
+        ...css(titleTextStyles),
     }
     const mergedSliderStyles = {
         ...defaultSliderStyles,
-        ...css(sliderStyles)
+        ...css(sliderStyles),
     }
     const mergedSliderMarkStyles = {
         ...defaultSliderMarkStyles,
-        ...css(sliderMarkStyles)
+        ...css(sliderMarkStyles),
     }
     const mergedSliderTrackStyles = {
         ...defaultSliderTrackStyles,
-        ...css(sliderTrackStyles)
+        ...css(sliderTrackStyles),
     }
     const mergedSliderThumbStyles = {
         ...defaultSliderThumbStyles,
-        ...css(sliderThumbStyles)
+        ...css(sliderThumbStyles),
     }
     const mergedSliderFilledTrackStyles = {
         ...defaultSliderFilledTrackStyles,
-        ...css(sliderFilledTrackStyles)
+        ...css(sliderFilledTrackStyles),
     }
     const mergedTooltipStyles = {
         ...defaultTooltipStyles,
-        ...css(tooltipStyles)
+        ...css(tooltipStyles),
     }
     return (
         <Flex css={mergedWrapperStyles}>
-            <Text css={mergedTitleTextStyles}>
-                {titleText}
-            </Text>
+            <Text css={mergedTitleTextStyles}>{titleText}</Text>
             <Slider
-            css={mergedSliderStyles}
-            id={sliderId}
-            defaultValue={sliderDefaultValue}
-            value={sliderValue}
-            min={sliderMinValue}
-            max={sliderMaxValue}
-            onChange={(v) => onChangeSliderHandler(v)}
-            onMouseEnter={() => setShowTooltip(true)}
-            onMouseLeave={() => setShowTooltip(false)}
+                css={mergedSliderStyles}
+                id={sliderId}
+                defaultValue={sliderDefaultValue}
+                value={sliderValue}
+                min={sliderMinValue}
+                max={sliderMaxValue}
+                onChange={(v) => onChangeSliderHandler(v)}
+                onMouseEnter={() => setShowTooltip(true)}
+                onMouseLeave={() => setShowTooltip(false)}
             >
-            <>
-            {sliderMarkNumList.map((value) => {
-                return(
-                <SliderMark
-                    css={mergedSliderMarkStyles}
-                    value={value}
+                <>
+                    {sliderMarkNumList.map((value) => {
+                        return (
+                            <SliderMark key={value} css={mergedSliderMarkStyles} value={value}>
+                                {value}px
+                            </SliderMark>
+                        )
+                    })}
+                </>
+                <SliderTrack css={mergedSliderTrackStyles}>
+                    <SliderFilledTrack css={mergedSliderFilledTrackStyles} />
+                </SliderTrack>
+                <Tooltip
+                    css={mergedTooltipStyles}
+                    hasArrow={tooltipHasArrow}
+                    placement={tooltipPlacement}
+                    isOpen={showTooltip}
+                    label={`${sliderValue}px`}
                 >
-                    {value}px
-                </SliderMark>
-            )})}
-            </>
-            <SliderTrack
-            css={mergedSliderTrackStyles}
-            >
-                <SliderFilledTrack css={mergedSliderFilledTrackStyles}/>        
-            </SliderTrack>
-            <Tooltip
-            css={mergedTooltipStyles}
-            hasArrow={tooltipHasArrow}
-            placement={tooltipPlacement}
-            isOpen={showTooltip}
-            label={`${sliderValue}px`}
-            >
-
-            </Tooltip>
-            <SliderThumb css={mergedSliderThumbStyles}/>
+                    <SliderThumb css={mergedSliderThumbStyles} />
+                </Tooltip>
             </Slider>
         </Flex>
     )

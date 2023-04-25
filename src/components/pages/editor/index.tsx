@@ -1,5 +1,6 @@
 import React from 'react'
 import { Grid, GridItem } from '@chakra-ui/react'
+import { FontSize } from './fontSize'
 
 export const Editor = () => {
     return (
@@ -23,6 +24,7 @@ export const Editor = () => {
             </GridItem>
             <GridItem area={'edit'} backgroundColor={'gray.500'} overflowX={'hidden'} overflowY={'scroll'}>
                 {/* <CssEditArea /> */}
+                <FontSize />
             </GridItem>
             <GridItem area={'button'} backgroundColor={'gray.200'} overflow={'hidden'}>
                 {/* <ButtonView /> */}
