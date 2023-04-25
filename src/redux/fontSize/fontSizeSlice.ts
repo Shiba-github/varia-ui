@@ -4,6 +4,7 @@ import { RootState } from '../store'
 
 type typeFontSize = {
     fontSize: CSSObject
+    isDisplayOn: boolean
 }
 
 const initialState: typeFontSize = {
@@ -22,7 +23,8 @@ const initialState: typeFontSize = {
             '50%': { fontSize: '15px !important' },
             'to': { fontSize: '10px' }
         }
-    }
+    },
+    isDisplayOn: false
 }
 
 
@@ -36,10 +38,12 @@ export const fontSizeSlice = createSlice({
                 ...action.payload
         }
     },
+    setIsDisplayOn: (state, action:PayloadAction<boolean>) => {
+        state.isDisplayOn = action.payload
+    }
     }
 })
 
 export const { mergeCSS } = fontSizeSlice.actions
-export const fontSize = (state: RootState) => state.fontSizeReducer.fontSize
 
 export default fontSizeSlice.reducer
