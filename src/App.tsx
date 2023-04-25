@@ -6,7 +6,7 @@ import { store } from '@/redux/store'
 import { mainTheme } from '@/style/mainTheme'
 import { Editor } from '@/components/pages/editor'
 import { Template } from '@/components/pages/template'
-import Header from '@/components/shared/Header'
+import Header from '@/components/shared/header/Header'
 
 const App = () => {
     useEffect(() => {
