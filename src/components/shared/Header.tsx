@@ -1,7 +1,6 @@
-import { Box, Button, Flex } from '@chakra-ui/react'
 import React from 'react'
+import { Box, Button, Flex } from '@chakra-ui/react'
 import { Link, useLocation } from 'react-router-dom'
-import { FontSize } from '../pages/editor/fontSize'
 
 const Header = () => {
     const location = useLocation()

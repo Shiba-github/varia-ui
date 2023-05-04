@@ -1,15 +1,16 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { SliderEditer } from '@/components/shared/sliderEditer'
+import { useFontSizeHook } from './hooks'
 
 export const FontSize = () => {
-    const [sliderValue, setSliderValue] = useState(25)
-
+    const { handler, numValue, isDisplayOn } = useFontSizeHook()
+    if (isDisplayOn === false) return null
     return (
         <SliderEditer
             titleText="Font Size"
             sliderId="fontsize"
-            sliderValue={sliderValue}
-            onChangeSliderHandler={setSliderValue}
+            sliderValue={numValue}
+            onChangeSliderHandler={handler}
         />
     )
 }

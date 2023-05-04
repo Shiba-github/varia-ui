@@ -1,15 +1,5 @@
 import React, { useState } from 'react'
-import {
-    Slider,
-    SliderTrack,
-    SliderFilledTrack,
-    SliderThumb,
-    SliderMark,
-    Tooltip,
-    Flex,
-    Text,
-    FlexboxProps,
-} from '@chakra-ui/react'
+import { Slider, SliderTrack, SliderFilledTrack, SliderThumb, SliderMark, Tooltip, Flex, Text } from '@chakra-ui/react'
 import { css, CSSObject } from '@emotion/react'
 
 type typeProps = {
@@ -24,7 +14,7 @@ type typeProps = {
     titleText: string
     sliderId: string
     sliderDefaultValue?: number
-    sliderValue: number
+    sliderValue: number | undefined
     sliderMinValue?: number
     sliderMaxValue?: number
     onChangeSliderHandler: (v: number) => void
@@ -43,6 +33,7 @@ const defaultWrapperStyles = {
     borderRadius: '1rem',
     borderColor: 'gray',
     backgroundColor: 'gray',
+    padding: '15px',
 }
 
 const defaultTitleTextStyles = {
@@ -54,7 +45,7 @@ const defaultTitleTextStyles = {
 }
 const defaultSliderStyles = {}
 const defaultSliderMarkStyles = {
-    marginTop: '1px',
+    marginTop: '10px',
     marginLeft: '-2.5px',
     fontSize: '15px',
 }

@@ -2,15 +2,13 @@ import { CSSObject } from '@emotion/react'
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { RootState } from '../store'
 
-type typecolor = {
+type TypeColor = {
     color: CSSObject
 }
 
-const initialState: typecolor = {
+const initialState: TypeColor = {
     color: {
-        _default: {
-            color: '12px',
-        },
+        color: '12px',
     },
 }
 

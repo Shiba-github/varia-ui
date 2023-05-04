@@ -1,16 +1,19 @@
 import { CSSObject } from '@emotion/react'
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import fontSizeIconPath from '@/asets/fontSize/fontSize.png'
 
-type typeFontSize = {
+type TypeFontSize = {
+    titile: string
+    iconPath: string
     fontSize: CSSObject
     isDisplayOn: boolean
 }
 
-const initialState: typeFontSize = {
+const initialState: TypeFontSize = {
+    titile: 'FontSize',
+    iconPath: fontSizeIconPath,
     fontSize: {
-        _default: {
-            fontSize: '12px',
-        },
+        fontSize: '12px',
         '&:hover': {
             fontSize: 'max(2vw, 14px)',
         },
@@ -30,7 +33,7 @@ export const fontSizeSlice = createSlice({
     name: 'fontSize',
     initialState,
     reducers: {
-        mergeCSS: (state, action: PayloadAction<CSSObject>) => {
+        mergeCss: (state, action: PayloadAction<CSSObject>) => {
             state.fontSize = {
                 ...state.fontSize,
                 ...action.payload,
@@ -42,6 +45,6 @@ export const fontSizeSlice = createSlice({
     },
 })
 
-export const { mergeCSS } = fontSizeSlice.actions
+export const fontSizeSliceActions = fontSizeSlice.actions
 
 export default fontSizeSlice.reducer

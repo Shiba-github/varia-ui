@@ -1,6 +1,5 @@
 import { CSSObject } from '@emotion/react'
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { color } from '../color/colorSlice'
 import { RootState } from '../store'
 
 type counterState = {
@@ -15,17 +14,18 @@ export const cssObjectSlice = createSlice({
     name: 'cssObject',
     initialState,
     reducers: {
-        mergeAll: (state) => {
+        mergeToAll: (state, action: PayloadAction<CSSObject>) => {
+            // ここの書き方が無限ループの原因説濃厚
             const newCSSObject = {
                 ...state.cssObject,
-                ...color,
+                ...action.payload,
             }
             state.cssObject = newCSSObject
         },
     },
 })
 
-export const { mergeAll } = cssObjectSlice.actions
+export const { mergeToAll } = cssObjectSlice.actions
 export const cssObject = (state: RootState) => state.cssObjectReducer.cssObject
 
 export default cssObjectSlice.reducer
