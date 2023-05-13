@@ -29,32 +29,43 @@ const defaultWrapperStyles = {
     width: '50rem',
     marginTop: '1rem',
     paddingTop: '0.5rem',
-    border: '1px',
-    borderRadius: '1rem',
-    borderColor: 'gray',
-    backgroundColor: 'gray',
-    padding: '15px',
+    borderWidth: '2px',
+    borderStyle: 'solid',
+    borderColor: '#cad0d8',
+    borderRadius: '0.8rem',
+    backgroundColor: '#fff',
+    padding: '16px',
 }
 
 const defaultTitleTextStyles = {
-    width: '6rem',
-    color: 'black',
+    width: '6.5rem',
+    color: '#27272A',
     fontSize: '1.2rem',
+    fontWeight: '500',
     marginLeft: '1rem',
     marginRight: '1rem',
 }
-const defaultSliderStyles = {}
-const defaultSliderMarkStyles = {
-    marginTop: '10px',
-    marginLeft: '-2.5px',
-    fontSize: '15px',
+const defaultSliderStyles = {
+    marginRight: '16px',
 }
-const defaultSliderTrackStyles = {}
-const defaultSliderThumbStyles = {}
-const defaultSliderFilledTrackStyles = {}
+const defaultSliderMarkStyles = {
+    color: '#27272A',
+    marginTop: '12px',
+    marginLeft: '-10px',
+    fontSize: 'sm',
+}
+const defaultSliderTrackStyles = {
+    background: "#f0f0f0"
+}
+const defaultSliderThumbStyles = {
+}
+const defaultSliderFilledTrackStyles = {
+    background: '#42a4fa'
+}
 const defaultTooltipStyles = {
-    color: 'white',
-    backgroundColor: 'green',
+    color: '#fff',
+    backgroundColor: '#2b364a',
+    borderRadius: '8px',
 }
 
 export const SliderEditer = ({
