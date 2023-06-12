@@ -24,7 +24,7 @@ const defaultStyles = {
     fontSize: '1rem',
     justifyContent: 'start',
     boxShadow: 'none !important',
-    borderRadius: '0rem',
+    borderRadius: '0.5rem',
     cursor: 'pointer',
     paddingLeft: '1rem',
 }
