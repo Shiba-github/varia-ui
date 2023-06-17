@@ -11,8 +11,9 @@ export const OnOffArea = () => {
                 justifyContent={'center'}
                 color={'white'}
                 fontWeight={'bold'}
-                marginBottom={'0.5rem'}
-                fontSize={'2rem'}
+                py={'0.5rem'}
+                fontSize={'2xl'}
+                borderBottom={'0.1px solid #A0AEC0'}
             >
                 Basics
             </Text>

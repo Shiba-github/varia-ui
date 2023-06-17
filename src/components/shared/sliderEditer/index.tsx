@@ -135,7 +135,7 @@ export const SliderEditer = ({
                 <>
                     {sliderMarkNumList.map((value) => {
                         return (
-                            <SliderMark key={value} css={mergedSliderMarkStyles} value={value} color="primary.500">
+                            <SliderMark key={value} css={mergedSliderMarkStyles} value={value} color="#3D4054">
                                 {value}px
                             </SliderMark>
                         )

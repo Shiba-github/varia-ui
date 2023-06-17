@@ -12,8 +12,9 @@ export const PseudoArea = () => {
                 justifyContent={'center'}
                 color={'white'}
                 fontWeight={'bold'}
-                marginBottom={'0.5rem'}
-                fontSize={'1.6rem'}
+                py={'8px'}
+                fontSize={'2xl'}
+                borderBottom={'0.1px solid #A0AEC0'}
             >
                 Pseudo Element
             </Text>
@@ -25,9 +26,11 @@ export const PseudoArea = () => {
                 justifyContent={'center'}
                 color={'white'}
                 fontWeight={'bold'}
-                marginTop={'0.5rem'}
-                marginBottom={'0.5rem'}
-                fontSize={'1.6rem'}
+                py={'0.5rem'}
+                mt={'1.5rem'}
+                mb={'0.5rem'}
+                fontSize={'2xl'}
+                borderBottom={'0.1px solid #A0AEC0'}
             >
                 Pseudo Class
             </Text>
