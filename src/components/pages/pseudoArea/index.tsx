@@ -12,9 +12,9 @@ export const PseudoArea = () => {
                 justifyContent={'center'}
                 color={'white'}
                 fontWeight={'bold'}
+                bg={'secondary.600'}
                 py={'8px'}
                 fontSize={'2xl'}
-                borderBottom={'0.1px solid #A0AEC0'}
             >
                 Pseudo Element
             </Text>
@@ -24,13 +24,13 @@ export const PseudoArea = () => {
                 display={'flex'}
                 alignItems={'center'}
                 justifyContent={'center'}
+                bg={'secondary.600'}
                 color={'white'}
                 fontWeight={'bold'}
                 py={'0.5rem'}
                 mt={'1.5rem'}
                 mb={'0.5rem'}
                 fontSize={'2xl'}
-                borderBottom={'0.1px solid #A0AEC0'}
             >
                 Pseudo Class
             </Text>

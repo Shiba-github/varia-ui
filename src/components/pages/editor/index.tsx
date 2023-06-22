@@ -21,13 +21,13 @@ export const Editor = () => {
             overflowX={'hidden'}
             overflowY={'hidden'}
         >
-            <GridItem area={'pseudo'} backgroundColor={'primary.600'} overflowX={'hidden'} overflowY={'hidden'}>
+            <GridItem area={'pseudo'} backgroundColor={'secondary.400'} overflowX={'hidden'} overflowY={'hidden'}>
                 <PseudoArea />
             </GridItem>
             <GridItem
                 area={'pseudoDisplay'}
-                borderBottom={'1px solid primary.600'}
-                backgroundColor={'primary.400'}
+                backgroundColor={'secondary.400'}
+                h={'52px'}
                 overflowX={'hidden'}
                 overflowY={'hidden'}
             >
@@ -37,7 +37,7 @@ export const Editor = () => {
                 area={'custom'}
                 display={'flex'}
                 flexDirection={'column'}
-                backgroundColor={'primary.600'}
+                backgroundColor={'secondary.400'}
                 width={'15rem'}
                 height={'90%'}
                 flexWrap={'wrap'}
@@ -71,7 +71,7 @@ export const Editor = () => {
             <GridItem
                 display={'flex'}
                 area={'code'}
-                backgroundColor={'primary.300'}
+                backgroundColor={'secondary.300'}
                 alignItems={'center'}
                 justifyContent={'center'}
             >

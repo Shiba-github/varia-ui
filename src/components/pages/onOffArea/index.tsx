@@ -12,8 +12,8 @@ export const OnOffArea = () => {
                 color={'white'}
                 fontWeight={'bold'}
                 py={'0.5rem'}
+                bg={'secondary.600'}
                 fontSize={'2xl'}
-                borderBottom={'0.1px solid #A0AEC0'}
             >
                 Basics
             </Text>

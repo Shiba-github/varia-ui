@@ -15,7 +15,6 @@ export const PseudoDisplay = () => {
                         display={'inline-block'}
                         color={'white'}
                         bg={'blue.500'}
-                        border={'1px solid red.400'}
                         borderRadius={'12px'}
                         padding={'0.2rem 0.6rem'}
                     >

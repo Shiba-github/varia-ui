@@ -15,15 +15,13 @@ type propsType = {
 const defaultStyles = {
     // flexDirection: 'row',
     alignItems: 'center',
-    width: '15rem',
     height: '2rem',
     padding: '0.2rem',
     color: 'white',
-    backgroundColor: '#1a202c',
+    backgroundColor: '#2F3A51',
     opacity: '1',
     fontSize: '1rem',
     justifyContent: 'start',
-    borderBottom: '0.1px solid #A0AEC0',
     boxShadow: 'none !important',
     cursor: 'pointer',
     paddingLeft: '1rem',
@@ -35,9 +33,9 @@ export const OnOffButton = ({
     isDisplay,
     onClickHandler,
     buttonStyles = defaultStyles,
-    onClickBackgroundColor = '#3182CE',
+    onClickBackgroundColor = '#4299E1',
     whileHoverBackgroundColor = '#718096',
-    whileHoverOnClickBackgroundColor = '#4299E1',
+    whileHoverOnClickBackgroundColor = '#63B3ED',
 }: propsType) => {
     const mergedStyles = {
         ...defaultStyles,

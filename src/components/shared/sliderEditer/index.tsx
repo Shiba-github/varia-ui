@@ -58,7 +58,7 @@ const defaultSliderTrackStyles = {
 }
 const defaultSliderThumbStyles = {}
 const defaultSliderFilledTrackStyles = {
-    background: '#42a4fa',
+    background: '#59A5D9',
 }
 const defaultTooltipStyles = {
     color: '#fff',
@@ -76,12 +76,12 @@ export const SliderEditer = ({
     tooltipStyles = defaultTooltipStyles,
     titleText,
     sliderId,
-    sliderDefaultValue = 25,
+    sliderDefaultValue = 20,
     sliderValue,
     sliderMinValue = 0,
-    sliderMaxValue = 200,
+    sliderMaxValue = 100,
     onChangeSliderHandler,
-    sliderMarkNumList = [50, 100, 150],
+    sliderMarkNumList = [20, 50, 80],
     tooltipHasArrow = true,
     tooltipPlacement = 'top',
 }: typeProps) => {
@@ -119,7 +119,7 @@ export const SliderEditer = ({
         ...css(tooltipStyles),
     }
     return (
-        <Flex css={mergedWrapperStyles} borderColor="primary.200">
+        <Flex css={mergedWrapperStyles} borderColor="secondary.200">
             <Text css={mergedTitleTextStyles}>{titleText}</Text>
             <Slider
                 css={mergedSliderStyles}
@@ -136,7 +136,7 @@ export const SliderEditer = ({
                     {sliderMarkNumList.map((value) => {
                         return (
                             <SliderMark key={value} css={mergedSliderMarkStyles} value={value} color="#3D4054">
-                                {value}px
+                                {value}
                             </SliderMark>
                         )
                     })}
@@ -150,7 +150,7 @@ export const SliderEditer = ({
                     placement={tooltipPlacement}
                     isOpen={showTooltip}
                     label={`${sliderValue}px`}
-                    backgroundColor="primary.400"
+                    backgroundColor="secondary.400"
                 >
                     <SliderThumb css={mergedSliderThumbStyles} />
                 </Tooltip>

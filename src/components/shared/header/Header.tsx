@@ -1,4 +1,5 @@
 import { Box, Button, Flex } from '@chakra-ui/react'
+import { ArrowForwardIcon } from '@chakra-ui/icons'
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
@@ -7,7 +8,6 @@ const Header = () => {
     const isEditor = location.pathname === '/editor'
     let buttonLink
 
-    // editorページのときは、template(ホーム)ページへのリンクを表示する
     if (isEditor) {
         buttonLink = <Link to="/">Template</Link>
     } else buttonLink = <Link to="/editor">Editor</Link>
@@ -27,7 +27,20 @@ const Header = () => {
                 Varia UI
             </Box>
             <Flex flexDirection={'column'} justifyContent={'center'}>
-                <Button w={'127px'} variant="outline" size="lg" mr={4} _hover={{ bg: 'blackAlpha.100' }}>
+                <Button
+                    rightIcon={<ArrowForwardIcon />}
+                    w={'157px'}
+                    variant="solid"
+                    size="lg"
+                    bg="primary.600"
+                    color="white"
+                    mr={4}
+                    _hover={{ bg: 'primary.500' }}
+                    _active={{
+                        bg: 'primary.500',
+                        color: 'white',
+                    }}
+                >
                     {buttonLink}
                 </Button>
             </Flex>
