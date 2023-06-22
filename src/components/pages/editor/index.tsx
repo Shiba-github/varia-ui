@@ -21,12 +21,13 @@ export const Editor = () => {
             overflowX={'hidden'}
             overflowY={'hidden'}
         >
-            <GridItem area={'pseudo'} backgroundColor={'rgb(26 32 44)'} overflowX={'hidden'} overflowY={'scroll'}>
+            <GridItem area={'pseudo'} backgroundColor={'secondary.400'} overflowX={'hidden'} overflowY={'hidden'}>
                 <PseudoArea />
             </GridItem>
             <GridItem
                 area={'pseudoDisplay'}
-                backgroundColor={'rgb(26 32 44)'}
+                backgroundColor={'secondary.400'}
+                h={'52px'}
                 overflowX={'hidden'}
                 overflowY={'hidden'}
             >
@@ -36,7 +37,7 @@ export const Editor = () => {
                 area={'custom'}
                 display={'flex'}
                 flexDirection={'column'}
-                backgroundColor={'rgb(26 32 44)'}
+                backgroundColor={'secondary.400'}
                 width={'15rem'}
                 height={'90%'}
                 flexWrap={'wrap'}
@@ -44,7 +45,14 @@ export const Editor = () => {
             >
                 <OnOffArea />
             </GridItem>
-            <GridItem area={'edit'} backgroundColor={'gray.500'} overflowX={'hidden'} overflowY={'scroll'}>
+            <GridItem
+                display={'flex'}
+                flexDirection={'column'}
+                alignItems={'center'}
+                backgroundColor={'gray.500'}
+                overflowX={'hidden'}
+                overflowY={'hidden'}
+            >
                 {/* <CssEditArea /> */}
                 <FontSize />
             </GridItem>
@@ -63,7 +71,7 @@ export const Editor = () => {
             <GridItem
                 display={'flex'}
                 area={'code'}
-                backgroundColor={'rgb(26 32 44)'}
+                backgroundColor={'secondary.300'}
                 alignItems={'center'}
                 justifyContent={'center'}
             >

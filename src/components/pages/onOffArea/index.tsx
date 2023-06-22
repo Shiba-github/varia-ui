@@ -9,8 +9,11 @@ export const OnOffArea = () => {
                 display={'flex'}
                 alignItems={'center'}
                 justifyContent={'center'}
-                backgroundColor={'#f5b199'}
-                fontSize={'2rem'}
+                color={'white'}
+                fontWeight={'bold'}
+                py={'0.5rem'}
+                bg={'secondary.600'}
+                fontSize={'2xl'}
             >
                 Basics
             </Text>

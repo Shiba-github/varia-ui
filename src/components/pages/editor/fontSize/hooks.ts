@@ -12,7 +12,7 @@ export const useFontSizeHook = () => {
         }
         dispatch(fontSizeSliceActions.mergeCss(result))
     }
-    const numValue = convertPxtoNumber(fontSize.fontSize)
+    const numValue = convertPxtoNumber(fontSize.fontSiz as string)
 
     const isDisplayOn = useAppSelector((state) => state.fontSizeReducer.isDisplayOn)
     return {

@@ -29,32 +29,40 @@ const defaultWrapperStyles = {
     width: '50rem',
     marginTop: '1rem',
     paddingTop: '0.5rem',
-    border: '1px',
-    borderRadius: '1rem',
-    borderColor: 'gray',
-    backgroundColor: 'gray',
-    padding: '15px',
+    borderWidth: '2px',
+    borderStyle: 'solid',
+    borderRadius: '0.8rem',
+    backgroundColor: '#fff',
+    padding: '16px',
 }
 
 const defaultTitleTextStyles = {
-    width: '6rem',
-    color: 'black',
+    width: '6.5rem',
+    color: '#27272A',
     fontSize: '1.2rem',
+    fontWeight: '500',
     marginLeft: '1rem',
     marginRight: '1rem',
 }
-const defaultSliderStyles = {}
-const defaultSliderMarkStyles = {
-    marginTop: '10px',
-    marginLeft: '-2.5px',
-    fontSize: '15px',
+const defaultSliderStyles = {
+    marginRight: '16px',
 }
-const defaultSliderTrackStyles = {}
+const defaultSliderMarkStyles = {
+    color: '#27272A',
+    marginTop: '12px',
+    marginLeft: '-10px',
+    fontSize: 'sm',
+}
+const defaultSliderTrackStyles = {
+    background: '#f0f0f0',
+}
 const defaultSliderThumbStyles = {}
-const defaultSliderFilledTrackStyles = {}
+const defaultSliderFilledTrackStyles = {
+    background: '#59A5D9',
+}
 const defaultTooltipStyles = {
-    color: 'white',
-    backgroundColor: 'green',
+    color: '#fff',
+    borderRadius: '8px',
 }
 
 export const SliderEditer = ({
@@ -68,12 +76,12 @@ export const SliderEditer = ({
     tooltipStyles = defaultTooltipStyles,
     titleText,
     sliderId,
-    sliderDefaultValue = 25,
+    sliderDefaultValue = 20,
     sliderValue,
     sliderMinValue = 0,
-    sliderMaxValue = 200,
+    sliderMaxValue = 100,
     onChangeSliderHandler,
-    sliderMarkNumList = [50, 100, 150],
+    sliderMarkNumList = [20, 50, 80],
     tooltipHasArrow = true,
     tooltipPlacement = 'top',
 }: typeProps) => {
@@ -111,7 +119,7 @@ export const SliderEditer = ({
         ...css(tooltipStyles),
     }
     return (
-        <Flex css={mergedWrapperStyles}>
+        <Flex css={mergedWrapperStyles} borderColor="secondary.200">
             <Text css={mergedTitleTextStyles}>{titleText}</Text>
             <Slider
                 css={mergedSliderStyles}
@@ -127,8 +135,8 @@ export const SliderEditer = ({
                 <>
                     {sliderMarkNumList.map((value) => {
                         return (
-                            <SliderMark key={value} css={mergedSliderMarkStyles} value={value}>
-                                {value}px
+                            <SliderMark key={value} css={mergedSliderMarkStyles} value={value} color="#3D4054">
+                                {value}
                             </SliderMark>
                         )
                     })}
@@ -142,6 +150,7 @@ export const SliderEditer = ({
                     placement={tooltipPlacement}
                     isOpen={showTooltip}
                     label={`${sliderValue}px`}
+                    backgroundColor="secondary.400"
                 >
                     <SliderThumb css={mergedSliderThumbStyles} />
                 </Tooltip>
